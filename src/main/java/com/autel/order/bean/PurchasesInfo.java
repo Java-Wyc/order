@@ -2,6 +2,7 @@ package com.autel.order.bean;
 
 /**
  * 给前台发送的信息
+ *
  * @param <T>
  */
 public class PurchasesInfo<T> {
@@ -22,5 +23,21 @@ public class PurchasesInfo<T> {
 
     public void setMessage(String message) {
         Message = message;
+    }
+
+    public PurchasesInfo(T data, String message) {
+        Data = data;
+        Message = message;
+    }
+    public PurchasesInfo() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "PurchasesInfo{" +
+                "Data=" + Data +
+                ", Message='" + Message + '\'' +
+                '}';
     }
 }

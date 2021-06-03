@@ -2,18 +2,25 @@ package com.autel.order.service.serviceimpl;
 
 import com.autel.order.bean.Purchases;
 import com.autel.order.dao.PurchasesDao;
+import com.autel.order.fiegn.OrderFeignClient;
 import com.autel.order.service.PurchasesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class PurchasesServiceImpl implements PurchasesService {
     @Autowired
     private PurchasesDao purchasesDao;
 
+    @Qualifier("orderFallBack")
+    @Autowired
+    private OrderFeignClient orderFeignClient;
     /**
      * 查询订单
+     *
      * @return
      */
     @Override
@@ -23,6 +30,7 @@ public class PurchasesServiceImpl implements PurchasesService {
 
     /**
      * 添加订单
+     *
      * @param purchases
      * @return
      */
@@ -33,6 +41,7 @@ public class PurchasesServiceImpl implements PurchasesService {
 
     /**
      * 修改订单
+     *
      * @param purchases
      * @return
      */
@@ -43,6 +52,7 @@ public class PurchasesServiceImpl implements PurchasesService {
 
     /**
      * 删除订单
+     *
      * @param purchases
      * @return
      */
@@ -53,6 +63,7 @@ public class PurchasesServiceImpl implements PurchasesService {
 
     /**
      * 根据姓名查询订单
+     *
      * @param name
      * @return
      */

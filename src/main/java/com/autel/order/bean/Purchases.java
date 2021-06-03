@@ -14,7 +14,7 @@ public class Purchases {
     private String product_name;//商品名称
     private Double price;//商品价格
     private Integer quantity;//购买数量
-    @JsonFormat( pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date date;//消费时间
 
     public Integer getCustomer_id() {
