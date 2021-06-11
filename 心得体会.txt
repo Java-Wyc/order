@@ -1,0 +1,16 @@
+心得体会--Java开发王银成
+	
+	在一开始拿到本次公司布置的项目考核时，我思考了许久，第一步就是建库建表，确定所需要的数据类型。
+之后开始慢慢构思项目的结构，大体上使用springboot的框架结构。
+	springboot主要提供了起步依赖和自动配置这两个功能，起步依赖是指由springboot帮助引入了项目所依赖的jar包，自动配置
+是指由springboot根据项目的类型自动进行配置。比如对于SpringMVC项目，SpringBoot会自动注册HandlerMapping、
+HandlerAdapter、ViewResolver等常用的Bean。
+	在搭建项目过程中，考虑好需要使用到的组件如mybatis等以及热部署，开始给项目设置端口，数据源等等。
+	在src/mian/java创建相应的目录结构，创建bean，dao，service，controller目录，然后编写bean类对应数据库中表。在dao，service
+以及controller之间采用接口的形式调用，在controller层中编写需要的业务结构，从前端收集到的请求，以及与前端的交互形式（json字符串）
+，业务主要有对订单的增删查改四个，编写好对应的服务层，持久层。
+	在完成一个简单的springboot的后端项目，我对springboot这个框架进行了复习，提高对它的使用熟练度。
+	在之后的两个周，我将springboot项目填入了springcloud结构，加入了eureka，hystrix，openfeign，security，zuul等组件，复习了springcloud
+的微服务架构。
+	总之，本次的项目考核主要是对springboot以及springcloud这两个技术的熟练度进行了一些提高，通过使用其中的组件最这些技术原理，思路有了一些浅薄的认识
+对以后要经常用到这些技术做一个铺垫，这个项目只是对一些组件的简单功能进行了展示，主要用于认识这些组件。
